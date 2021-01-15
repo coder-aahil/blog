@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style>
+a{
+    color:rgb(21, 148, 148);
+    text-decoration: none;
+}
+#sidebar{
+    float: right;
+    width: 30%;
+    padding: 10px;
+    background: #f8eeee;
+    height: 100%;
+}
+h1{
+    color: rgb(7, 63, 63);
+    font-weight: normal;
+    border-bottom: 1px solid #bbb;
+    padding:  0 0 10px 0;
+}
+h2{
+    font-weight: normal;
+    margin: 30px 0 0;
+}
+
+#content{
+    float: left;
+    width: 60%;
+    padding: 0 0 0 30px;
+}
+
+.pagination{
+    margin: 40px 0;
+    font-weight: bold;
+}
+        </style>
+        <title>
+            {% block title %} {% endblock %}
+            <!--<link href="{ % static 'b.css' % }" rel="stylesheet" type="text/css"> -->
+            
+        </title>
+        
+    </head>
+    <body>
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div id="sidebar">
+            <h2>My blog</h2>
+            <p>this is my blog..</p>
+
+        </div>
+        
+    </body>
+</html>
